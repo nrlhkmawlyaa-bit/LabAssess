@@ -119,6 +119,143 @@ Berikut merupakan dokumentasi antarmuka LabAssess berdasarkan masing-masing hak 
 | MariaDB / MySQL | Pengelolaan database relasional |
 | Lucide React | Ikon antarmuka |
 
+## 🧩 Implementasi Object-Oriented Programming (OOP)
+
+LabAssess menerapkan konsep Object-Oriented Programming (OOP) menggunakan Python pada bagian backend. Penerapan OOP bertujuan untuk menghasilkan struktur kode yang modular, terorganisasi, mudah dikembangkan, dan memiliki pembagian tanggung jawab yang jelas.
+
+### 1. Class dan Object
+
+Class digunakan sebagai cetak biru untuk membentuk objek. Pada LabAssess, terdapat beberapa class yang merepresentasikan jenis pengguna, seperti:
+
+- `PenggunaDasar`
+- `AdminUser`
+- `AsistenLabUser`
+- `MahasiswaUser`
+- `PenggunaFactory`
+
+Setiap class memiliki atribut dan method sesuai tanggung jawabnya.
+
+### 2. Encapsulation (Enkapsulasi)
+
+Enkapsulasi diterapkan melalui pengelompokan atribut dan method di dalam class.
+
+Contohnya pada `PenggunaDasar`, atribut `_id_pengguna`, `_nama_lengkap`, dan `_aktif` menggunakan konvensi protected-style Python. Akses terhadap beberapa atribut disediakan melalui decorator `@property`.
+
+```python
+class PenggunaDasar(ABC):
+
+    def __init__(self, id_pengguna, nama_lengkap, aktif=True):
+        self._id_pengguna = id_pengguna
+        self._nama_lengkap = nama_lengkap
+        self._aktif = aktif
+
+    @property
+    def nama_lengkap(self):
+        return self._nama_lengkap
+
+    def ubah_status(self, status):
+        self._aktif = status
+```
+
+### 3. Inheritance (Pewarisan)
+
+Pewarisan digunakan agar class turunan dapat menggunakan atribut dan perilaku dari class induk.
+
+LabAssess memiliki satu class induk, yaitu `PenggunaDasar`, yang diwarisi oleh tiga class pengguna:
+
+```python
+class AdminUser(PenggunaDasar):
+    ...
+
+class AsistenLabUser(PenggunaDasar):
+    ...
+
+class MahasiswaUser(PenggunaDasar):
+    ...
+```
+
+Dengan pendekatan ini, atribut dan perilaku umum pengguna tidak perlu ditulis ulang pada setiap class.
+
+### 4. Abstraction (Abstraksi)
+
+Abstraksi diterapkan menggunakan modul `abc` dari Python, yaitu `ABC` dan `@abstractmethod`.
+
+Class `PenggunaDasar` menetapkan kontrak berupa method `peran` dan `hak_akses` yang wajib diimplementasikan oleh setiap class turunannya.
+
+```python
+@property
+@abstractmethod
+def peran(self) -> str:
+    pass
+
+@abstractmethod
+def hak_akses(self) -> tuple[str, ...]:
+    pass
+```
+
+Dengan demikian, setiap jenis pengguna harus memiliki identitas peran dan daftar hak akses masing-masing.
+
+### 5. Polymorphism (Polimorfisme)
+
+Polimorfisme diterapkan melalui implementasi method yang sama dengan perilaku berbeda pada setiap class turunan.
+
+Contohnya adalah method `hak_akses()`:
+
+- **AdminUser:** Mengelola pengguna, mahasiswa, asisten, dan mata kuliah.
+- **AsistenLabUser:** Mengelola modul, soal, kuis, penilaian, dan peserta.
+- **MahasiswaUser:** Mengakses profil, mengerjakan kuis, melihat hasil, dan riwayat.
+
+Ketiga class menggunakan nama method yang sama, tetapi menghasilkan daftar hak akses yang berbeda sesuai jenis pengguna.
+
+### 6. Factory Pattern
+
+Selain empat konsep utama OOP, LabAssess juga menggunakan Factory Pattern melalui class `PenggunaFactory`.
+
+```python
+class PenggunaFactory:
+
+    @staticmethod
+    def buat_dari_model(pengguna: User) -> PenggunaDasar:
+
+        pembuat_pengguna = {
+            "admin_developer": AdminUser,
+            "asisten_lab": AsistenLabUser,
+            "mahasiswa": MahasiswaUser,
+        }
+
+        kelas_pengguna = pembuat_pengguna.get(pengguna.role)
+
+        if kelas_pengguna is None:
+            raise ValueError("Role pengguna tidak dikenali")
+
+        return kelas_pengguna(
+            id_pengguna=pengguna.id,
+            nama_lengkap=pengguna.full_name,
+            aktif=pengguna.is_active,
+        )
+```
+
+Factory Pattern membantu proses pembuatan objek berdasarkan role pengguna tanpa harus menentukan class secara manual di setiap bagian aplikasi.
+
+### 📁 Lokasi Implementasi OOP
+
+```text
+backend/
+└── app/
+    ├── domain/
+    │   ├── pengguna_dasar.py
+    │   ├── admin.py
+    │   ├── asisten_lab.py
+    │   ├── mahasiswa.py
+    │   └── pengguna_factory.py
+    │
+    ├── services/
+    │   └── modul_praktikum_service.py
+    │
+    └── models/
+        └── pengguna.py
+```
+
 ## 🏗️ Arsitektur Sistem
 
 LabAssess menggunakan arsitektur client-server yang mengintegrasikan tiga komponen utama:
@@ -141,27 +278,3 @@ LabAssess menggunakan arsitektur client-server yang mengintegrasikan tiga kompon
           v
     MARIADB / MYSQL
 ```
-
-Setiap komponen memiliki tanggung jawab tersendiri dalam mendukung proses pengelolaan data dan aktivitas laboratorium.
-
----
-
-## 📂 Struktur Proyek
-
-```text
-LabAssess/
-│
-├── backend/
-│   ├── app/
-│   ├── migrations/
-│   └── storage/
-│
-├── frontend/
-│   └── src/
-│
-├── docs/
-│
-├── .gitignore
-└── README.md
-```
-
