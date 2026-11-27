@@ -20,15 +20,37 @@
 
 ## 🌐 Akses Aplikasi
 
+LabAssess dapat diakses melalui website maupun aplikasi desktop Windows.
+
+### 1. Website LabAssess
+
+Akses LabAssess secara online melalui browser di laptop maupun HP.
+
 <p align="center">
   <a href="https://labassess.my.id">
-    <img src="https://img.shields.io/badge/LIVE_DEMO-LabAssess-824E65?style=for-the-badge&logo=googlechrome&logoColor=white" />
+    <img src="https://img.shields.io/badge/BUKA_WEBSITE-LabAssess-824E65?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Buka Website LabAssess" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://labassess.my.id">https://labassess.my.id</a>
 </p>
+
+### 2. Aplikasi Desktop Windows
+
+Unduh installer LabAssess dalam format `.exe` melalui Google Drive, kemudian instal pada laptop atau komputer Windows.
+
+<p align="center">
+  <a href="https://drive.google.com/drive/folders/1yJljaUmH3K8kdUcv-k2xJyinsbda8_uU?usp=sharing">
+    <img src="https://img.shields.io/badge/UNDUH_APLIKASI-Windows-482A38?style=for-the-badge&logo=windows&logoColor=white" alt="Unduh LabAssess untuk Windows" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://drive.google.com/drive/folders/1yJljaUmH3K8kdUcv-k2xJyinsbda8_uU?usp=sharing">Unduh Installer LabAssess (.exe) melalui Google Drive</a>
+</p>
+
+**Catatan:** Aplikasi desktop memerlukan koneksi internet untuk mengakses server LabAssess.
 
 ---
 
