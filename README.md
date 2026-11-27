@@ -1,7 +1,7 @@
-
 <h1 align="center">
   🖥️ LabAssess (Laboratory Assessment System)
-<hr/>
+</h1>
+
 <p align="center">
   <img src="https://img.shields.io/badge/REACT.JS-B9DDF0?style=flat&logo=react&logoColor=34495E" />
   <img src="https://img.shields.io/badge/PYTHON-C9D9F2?style=flat&logo=python&logoColor=34415B" />
@@ -18,28 +18,47 @@
 
 <hr/>
 
+## 🌐 Akses Aplikasi
+
+<p align="center">
+  <a href="https://labassess.my.id">
+    <img src="https://img.shields.io/badge/LIVE_DEMO-LabAssess-824E65?style=for-the-badge&logo=googlechrome&logoColor=white" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://labassess.my.id">https://labassess.my.id</a>
+</p>
+
+---
+
 ## ✨ Fitur Unggulan
 
 LabAssess menyediakan fitur pengelolaan laboratorium berdasarkan tiga jenis pengguna dengan hak akses yang berbeda.
 
 ### 👨‍💼 Administrator
+
 - **Manajemen Akun:** Mengelola akun mahasiswa dan asisten laboratorium.
 - **Manajemen Mahasiswa:** Mengelola data mahasiswa berdasarkan NIM dan program studi.
 - **Pengelolaan Asisten:** Membuat dan mengelola akun asisten laboratorium.
 - **Pembagian Mahasiswa:** Mengatur penempatan mahasiswa ke asisten dan mata kuliah.
+- **Manajemen Akademik:** Mengelola program studi, mata kuliah, periode akademik, dan kelas.
 
 ### 👩‍🏫 Asisten Laboratorium
+
 - **Manajemen Modul:** Mengelola materi dan modul praktikum.
 - **Manajemen Soal:** Membuat dan mengelola bank soal.
 - **Manajemen Kuis:** Membuat, mengatur, dan mempublikasikan kuis.
 - **Penilaian:** Mengelola hasil evaluasi mahasiswa.
+- **Rekap Nilai:** Melihat hasil penilaian mahasiswa berdasarkan kelas dan kegiatan praktikum.
 
 ### 🎓 Mahasiswa
+
 - **Registrasi dan Login:** Mengakses aplikasi menggunakan akun mahasiswa.
 - **Dashboard Mahasiswa:** Melihat informasi akademik dan aktivitas praktikum.
 - **Materi Praktikum:** Mengakses modul pembelajaran.
 - **Kuis Online:** Mengerjakan kuis yang tersedia.
-- **Hasil Penilaian:** Melihat hasil evaluasi.
+- **Hasil Penilaian:** Melihat hasil evaluasi dan riwayat nilai.
 
 ---
 
@@ -49,63 +68,61 @@ Berikut merupakan dokumentasi antarmuka LabAssess berdasarkan masing-masing hak 
 
 ### 🔐 Halaman Login
 
-<img width="950" height="439" alt="image" src="https://github.com/user-attachments/assets/99517357-beb0-4d27-ab03-c19e3f009c09" />
+<img width="950" height="439" alt="Halaman Login LabAssess" src="https://github.com/user-attachments/assets/99517357-beb0-4d27-ab03-c19e3f009c09" />
 
-<img width="940" height="437" alt="image" src="https://github.com/user-attachments/assets/d8ea1bdf-d085-44d0-bfb4-8cca82e5321a" />
-
+<img width="940" height="437" alt="Halaman Login LabAssess" src="https://github.com/user-attachments/assets/d8ea1bdf-d085-44d0-bfb4-8cca82e5321a" />
 
 ### 👨‍💼 Dashboard Administrator
 
-1.Menu Overview
+#### 1. Menu Overview
 
-<img width="570" height="410" alt="image" src="https://github.com/user-attachments/assets/cd3b760d-9fc6-4ceb-9c04-f915553e1899" />
+<img width="570" height="410" alt="Dashboard Overview Administrator" src="https://github.com/user-attachments/assets/cd3b760d-9fc6-4ceb-9c04-f915553e1899" />
 
-2.Menu Pengguna
+#### 2. Menu Pengguna
 
-<img width="560" height="414" alt="image" src="https://github.com/user-attachments/assets/b6819c02-beb4-4db1-85b9-c24a47ab85b1" />
+<img width="560" height="414" alt="Menu Pengguna Administrator" src="https://github.com/user-attachments/assets/b6819c02-beb4-4db1-85b9-c24a47ab85b1" />
 
-3.Menu Mata Kuliah
+#### 3. Menu Mata Kuliah
 
-<img width="557" height="323" alt="image" src="https://github.com/user-attachments/assets/5dace82e-0872-4b1c-8fff-33302c78f92e" />
+<img width="557" height="323" alt="Menu Mata Kuliah" src="https://github.com/user-attachments/assets/5dace82e-0872-4b1c-8fff-33302c78f92e" />
 
-4.Menu Penempatan
+#### 4. Menu Penempatan
 
-<img width="568" height="322" alt="image" src="https://github.com/user-attachments/assets/a24ee042-38fa-49f1-9da3-aa2039d636ee" />
-
+<img width="568" height="322" alt="Menu Penempatan Mahasiswa" src="https://github.com/user-attachments/assets/a24ee042-38fa-49f1-9da3-aa2039d636ee" />
 
 ### 👩‍🏫 Dashboard Asisten Laboratorium
 
-1.Menu Overview
+#### 1. Menu Overview
 
-<img width="884" height="436" alt="image" src="https://github.com/user-attachments/assets/fb35148e-b261-4f89-9b02-00fea98ec2e6" />
+<img width="884" height="436" alt="Dashboard Overview Asisten" src="https://github.com/user-attachments/assets/fb35148e-b261-4f89-9b02-00fea98ec2e6" />
 
-2.Menu Kelas Saya
+#### 2. Menu Kelas Saya
 
-<img width="887" height="325" alt="image" src="https://github.com/user-attachments/assets/8a7ec75c-d24d-470f-9fc7-106923ae7de7" />
+<img width="887" height="325" alt="Menu Kelas Saya Asisten" src="https://github.com/user-attachments/assets/8a7ec75c-d24d-470f-9fc7-106923ae7de7" />
 
-3.Menu Pre Test & Post Test
+#### 3. Menu Pre Test & Post Test
 
-<img width="884" height="278" alt="image" src="https://github.com/user-attachments/assets/eb3149d2-de5b-4cbc-9d97-3afcbcac960c" />
+<img width="884" height="278" alt="Menu Pre Test dan Post Test" src="https://github.com/user-attachments/assets/eb3149d2-de5b-4cbc-9d97-3afcbcac960c" />
 
-4.Menu Rekap Nilai
+#### 4. Menu Rekap Nilai
 
-<img width="887" height="395" alt="image" src="https://github.com/user-attachments/assets/e97783a7-79bf-49be-82d6-0b3389eef9e5" />
-
+<img width="887" height="395" alt="Menu Rekap Nilai" src="https://github.com/user-attachments/assets/e97783a7-79bf-49be-82d6-0b3389eef9e5" />
 
 ### 🎓 Dashboard Mahasiswa
 
-1.Menu Overview
+#### 1. Menu Overview
 
-<img width="871" height="410" alt="image" src="https://github.com/user-attachments/assets/06d95171-73cc-4cf7-af12-5b534fc0d7c2" />
+<img width="871" height="410" alt="Dashboard Overview Mahasiswa" src="https://github.com/user-attachments/assets/06d95171-73cc-4cf7-af12-5b534fc0d7c2" />
 
-2.Menu Kelas Saya
+#### 2. Menu Kelas Saya
 
-<img width="899" height="281" alt="image" src="https://github.com/user-attachments/assets/93c99783-6303-448b-9d2c-855225880b13" />
+<img width="899" height="281" alt="Menu Kelas Saya Mahasiswa" src="https://github.com/user-attachments/assets/93c99783-6303-448b-9d2c-855225880b13" />
 
-3.Menu Riwayat Nilai
+#### 3. Menu Riwayat Nilai
 
-<img width="885" height="369" alt="image" src="https://github.com/user-attachments/assets/36ec2b11-a0d6-439e-8c57-466b77573e5f" />
+<img width="885" height="369" alt="Menu Riwayat Nilai Mahasiswa" src="https://github.com/user-attachments/assets/36ec2b11-a0d6-439e-8c57-466b77573e5f" />
 
+---
 
 ## 🛠️ Teknologi dan Tools
 
@@ -118,6 +135,8 @@ Berikut merupakan dokumentasi antarmuka LabAssess berdasarkan masing-masing hak 
 | SQLAlchemy | ORM untuk pengelolaan database |
 | MariaDB / MySQL | Pengelolaan database relasional |
 | Lucide React | Ikon antarmuka |
+
+---
 
 ## 🧩 Implementasi Object-Oriented Programming (OOP)
 
@@ -256,6 +275,8 @@ backend/
         └── pengguna.py
 ```
 
+---
+
 ## 🏗️ Arsitektur Sistem
 
 LabAssess menggunakan arsitektur client-server yang mengintegrasikan tiga komponen utama:
@@ -267,7 +288,7 @@ LabAssess menggunakan arsitektur client-server yang mengintegrasikan tiga kompon
     REACT.JS (Frontend)
           |
           v
-      REST API
+        REST API
           |
           v
     FASTAPI (Backend)
@@ -278,3 +299,21 @@ LabAssess menggunakan arsitektur client-server yang mengintegrasikan tiga kompon
           v
     MARIADB / MYSQL
 ```
+
+### Penjelasan Arsitektur
+
+1. Frontend React.js menyediakan antarmuka untuk administrator, asisten laboratorium, dan mahasiswa.
+2. REST API menjadi penghubung komunikasi antara frontend dan backend.
+3. Backend FastAPI menangani autentikasi, validasi, serta proses bisnis aplikasi.
+4. SQLAlchemy menjadi perantara antara aplikasi Python dan database.
+5. MariaDB/MySQL menyimpan data pengguna, akademik, kelas, modul, kuis, dan penilaian.
+
+---
+
+<p align="center">
+  <b>LabAssess — Laboratory Assessment System</b>
+</p>
+
+<p align="center">
+  Sistem Informasi Penilaian Laboratorium
+</p>
